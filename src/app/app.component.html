@@ -1,0 +1,26 @@
+<mat-grid-list cols="5" rowHeight="1:1" >
+  <div *ngFor="let grid of arrayGrid">
+
+    <div *ngIf="grid.counterExists">
+      <mat-grid-tile>{{grid.tileNumber}}
+      <div (click)="clickCounter()" class="counter">
+      <p >counter</p>
+      </div>
+      </mat-grid-tile>
+    </div>
+
+    <div *ngIf="!grid.counterExists">
+    <mat-grid-tile>{{grid.tileNumber}}
+    <!-- <div (click)="clickCounter()" class="counter">
+    <p >counter</p>
+    </div> -->
+    </mat-grid-tile>
+    </div>
+  </div>
+</mat-grid-list>
+
+  <button class="button" (click)="rollDice">roll dice </button>
+
+
+
+
